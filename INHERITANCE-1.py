@@ -1,4 +1,4 @@
-'''class Student:
+class Student:
     def display(self):
         print("Base class-parent")
 class Student_derived(Student):
@@ -6,7 +6,7 @@ class Student_derived(Student):
         print("Derived class-child")
 s =Student_derived()
 s.display()
-s.show()'''
+s.show()
 
 class Person:
     def __init__(self,name,age):
@@ -14,6 +14,7 @@ class Person:
         self.age=age
     def display(self):
         print(f"Name={self.name}\nAge={self.age}")
+
 class Student(Person):
     def __init__(self,name,age,stu_id,stu_dept):
         super().__init__(name,age)
