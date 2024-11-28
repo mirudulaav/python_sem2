@@ -6,19 +6,7 @@ class Inventory:
     def displayInventoryInfo(self):
         print("ID = ",self.id,"\nName = ",self.name,"\nCount = ",self.count)
 
-class Perks(Inventory):
-    def getDetails(self):
-        self.getInventoryInfo()
-        self.price=int(input("Enter the price: "))
-    def displayInfo(self):
-        self.displayInventoryInfo()
-        print("Price = ",self.price)
-
-p=Perks()
-p.getDetails()
-p.displayInfo()
-
-class Inventory:
+class Inventory:                                         
     def init(self,prodID,prodName,prodCount):
         self.prodID=prodID
         self.prodName=prodName
@@ -30,3 +18,16 @@ class Inventory:
 
 prod=Inventory(3412,"Pencil",50)
 prod.display()
+
+class Inventory:
+    def _init_(self):
+        self.prodId = input("Enter the ProdId :")
+        self.prodname = input("Enter the ProdName:")
+        self.prodcount = input("Enter the ProdCount:")
+
+class Products(Inventory):
+    def display(self):
+        print("ProdId=",self.prodId,"\nProdName=",self.prodname,"\nProdCount=",self.prodcount)
+
+p=Products()
+p.display()
